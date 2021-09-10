@@ -1,7 +1,9 @@
 @charset "utf-8";
 .jumbotron {
     height: 700px;
-    background-image: url("../img/timon-studler-ABGaVhJxwDQ-1920.jpg"); 
+    background-image: url("../img/daria-1274.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container .dark-box {
     color: #fff;
