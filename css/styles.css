@@ -1,0 +1,8 @@
+@charset "utf-8";
+.jumbotron {
+    background-image: url("../img/timon-studler-ABGaVhJxwDQ-1920.jpg"); 
+}
+.container .dark-box {
+    color: #fff;
+    background-color: rgba(0,0,0,0.50);    
+}
