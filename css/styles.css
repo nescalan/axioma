@@ -17,5 +17,40 @@
   width: 70%;
   margin: 30px auto 0 auto;
 }
-.hero-message {
+.jumbotron-light-blue {
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  background: #ff416c;
+  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  /* background-color: #03507f; */
+  border-radius: 0.3rem;
+}
+.text-gray {
+  color: #e9ecef;
+}
+button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 45px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button.ghost {
+  background-color: transparent;
+  border-color: #ffffff;
 }
