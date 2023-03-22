@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Fira+Sans+Condensed:wght@600&family=Mukta+Vaani:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;600&family=Fira+Sans+Condensed:wght@400;500&family=Mukta+Vaani:wght@400;600&display=swap");
 
 :root {
   /***** COLORS *****/
@@ -11,4 +11,7 @@
   --font-assistant-h1: "Assistant", sans-serif;
   --font-fira-h2: "Fira Sans Condensed", sans-serif;
   --font-mukta-body: "Mukta Vaani", sans-serif;
+  --size-h1: 3.6rem;
+  --size-h2: 2rem;
+  --size-body: 1.6rem;
 }
