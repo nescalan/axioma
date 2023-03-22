@@ -19,33 +19,46 @@
     <title>Axioma</title>
   </head>
   <body>
-    <section id="sec-login" class="container">
+    <section id="sec-signup" class="container">
       <div class="form-box">
         <form class="form">
           <span class="title">Sign up</span>
           <h2 class="subtitle">Create a free account with your email.</h2>
           <div class="form-container">
             <input
-              id="full-name"
+              id="full-name-signup"
               class="input"
               name="full-name"
               type="text"
               placeholder="Full Name"
             />
-            <input id="email" class="input" type="email" placeholder="Email" />
             <input
-              id="password"
+              id="email-signup"
+              class="input"
+              type="email"
+              placeholder="Email"
+            />
+            <input
+              id="password-signup"
               class="input"
               type="password"
               placeholder="Password"
             />
           </div>
-          <button>Create Account</button>
+          <button id="btn-signup" type="button">Create Account</button>
         </form>
         <div class="form-section">
           <p>Have an account? <a href="./login.html">Log In</a></p>
         </div>
       </div>
     </section>
+
+    <!-- SCRIPT: jQuery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+    <!-- SCRIPT: Local JavaScript -->
+    <script src="./assets/js/registration.js"></script>
   </body>
 </html>
