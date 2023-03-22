@@ -21,12 +21,12 @@
   <body>
     <section id="sec-signup" class="container">
       <div class="form-box">
-        <form class="form">
+        <form id="signup-form" class="form">
           <span class="title">Sign up</span>
           <h2 class="subtitle">Create a free account with your email.</h2>
           <div class="form-container">
             <input
-              id="full-name-signup"
+              id="fullname-signup"
               class="input"
               name="full-name"
               type="text"
@@ -45,12 +45,13 @@
               placeholder="Password"
             />
           </div>
-          <button id="btn-signup" type="button">Create Account</button>
+          <button id="btn-signup" type="submit">Create Account</button>
         </form>
         <div class="form-section">
           <p>Have an account? <a href="./login.html">Log In</a></p>
         </div>
       </div>
+      <p id="signup-error-message"></p>
     </section>
 
     <!-- SCRIPT: jQuery Google CDN -->

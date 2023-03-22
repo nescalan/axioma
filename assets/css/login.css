@@ -30,16 +30,16 @@
   }
 }
 
-.grid-login {
+#signup-error-message {
   /* Box model */
-  display: flex;
-}
-.grid-login [class^="grid-item"] {
-  /* Box model */
-  width: 100%;
-  border: 1px solid red;
-}
-.grid-login .grid-item-1 {
+  margin-top: 2rem;
+  padding: 1.6rem 0;
+  /* border: 1px solid #a94442; */
+  text-align: center;
+  /* Typographic */
+  color: #a94442;
+  /* Visual */
+  /* background-color: #f2dede; */
 }
 /* Positioning */
 /* Box model */

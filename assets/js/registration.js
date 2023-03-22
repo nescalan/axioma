@@ -1,55 +1,37 @@
 $(document).ready(function () {
-  const names = [
-    {
-      firstName: "Nelson Escalante",
-      email: "nelson_escalante@gmail.com",
-      password: "",
-    },
-    {
-      firstName: "Nathalia Rojas",
-      email: "nathalia_rojas@gmail.com",
-      password: "",
-    },
-    {
-      firstName: "Marco Gonzalez",
-      email: "marco_gonzalez@gmail.com",
-      password: "",
-    },
-    {
-      firstName: "Tiffany Hume",
-      email: "tiffany_hume@gmail.com",
-      password: "",
-    },
-    {
-      firstName: "Patricia Escalante",
-      email: "patricia_escalante@gmail.com",
-      password: "",
-    },
-    {
-      firstName: "Jorge Basilio",
-      email: "jorge_basilio@gmail.com",
-      password: "",
-    },
-  ];
+  $("#signup-form").submit(function (event) {
+    // Prevent the form from submitting
+    event.preventDefault();
 
-  function validateInput(element) {
-    if (element === "") {
-      let message = "This field is required";
-      return message;
+    // Get the values entered in the form fields
+    let fullNameSignUp = $("#fullname-signup").val();
+    let emailSignUp = $("#email-signup").val();
+    let passwordInputSignUp = $("#password-signup").val();
+
+    // Using trim()
+    fullNameSignUp = $.trim(fullNameSignUp);
+    emailSignUp = $.trim(emailSignUp);
+    passwordInputSignUp = $.trim(passwordInputSignUp);
+
+    // DEBUG: console.log();
+    console.log(`Nombre: ${fullNameSignUp} | Tamaño: ${fullNameSignUp.length}`);
+    console.log(`Nombre: ${emailSignUp} | Tamaño: ${emailSignUp.length}`);
+    console.log(
+      `Password: ${passwordInputSignUp} | Tamaño: ${passwordInputSignUp.length}`
+    );
+
+    // Submit the form if the sanitized data is valid
+    if (
+      fullNameSignUp.length > 0 &&
+      emailSignUp.length > 0 &&
+      passwordInputSignUp.length > 0
+    ) {
+      $("#login-form").submit();
+      alert("Enviado correctamente");
+    } else {
+      $("#signup-error-message").text(
+        "Please fill in all the requested fields."
+      );
     }
-  }
-
-  // INPUT BOXES: Check if the Sign up input boxes are empty
-  $("#btn-signup").click(() => {
-    console.log("Sign Up Clicked");
-
-    // GET: all input values
-    let fullName = $("#full-name-signup").val();
-    $("#full-name-signup").val(validateInput(fullName));
-    let email = $("#email-signup").val();
-    let password = $("#password-signup").val();
-    console.log(fullName);
-    console.log(email);
-    console.log(password);
   });
 });

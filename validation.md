@@ -48,3 +48,9 @@ event.preventDefault();
     if (password.trim() === '') {
       // display an error message for the password field
       passwordInput.addClass('
+
+
+
+    // let regex = /^[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;\"'<>,.?\/\\|-]+$/;
+    // fullNameSignUp = fullNameSignUp.replace(regex, "");
+    // passwordInputSignUp = passwordInputSignUp.replace(regex, "");
