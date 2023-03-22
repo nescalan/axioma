@@ -1,0 +1,113 @@
+.form-box {
+  /* Box model */
+  margin: 0 auto;
+  max-width: 500px;
+  border-radius: 16px;
+
+  /* Typographic */
+  color: #010101;
+
+  /* Visual */
+  overflow: hidden;
+  background-color: #f1f7fe;
+}
+
+.form {
+  /* Positioning */
+  position: relative;
+
+  /* Box model */
+  padding: 32px 24px 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  /* Typographic */
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  /* Typographic */
+  font-weight: bold;
+  font-size: var(--size-h1);
+}
+
+/*Input boxes*/
+.form-container {
+  /* Box model */
+  width: 100%;
+  margin: 1rem 0 0.5rem;
+  border-radius: 8px;
+
+  /* Visual */
+  overflow: hidden;
+}
+
+.input {
+  /* Box model */
+  width: 100%;
+  height: 40px;
+  margin-top: 0.5rem;
+  padding: 8px 15px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+
+  /* Typographic */
+  /* font-size: 0.9rem; */
+
+  /* Visual */
+  outline: 0;
+  background-color: #fff;
+}
+
+.form-section {
+  /* Box model */
+  padding: 16px;
+  /* font-size: 0.85rem; */
+
+  /* Visual */
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  /* Typographic */
+  color: #0066ff;
+  font-weight: bold;
+
+  /* Visual */
+  transition: color 0.3s ease;
+}
+
+.form-section a:hover {
+  /* Typographic */
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  /* Box model */
+  padding: 1.6rem 16px;
+  border: 0;
+  border-radius: 8px;
+  /* Typographic */
+  color: #fff;
+  /* font-size: 1rem; */
+  font-weight: 600;
+  /* Visual */
+  cursor: pointer;
+  background-color: #0066ff;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+
+/* Positioning */
+/* Box model */
+/* Typographic */
+/* Visual */
+/* Misc */

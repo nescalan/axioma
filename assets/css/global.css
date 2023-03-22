@@ -1,0 +1,35 @@
+html {
+  /* Box model */
+  font-size: 62.5%;
+}
+body {
+  /* Box model */
+  font-family: var(--font-mukta-body);
+  font-size: 1.6rem;
+  background-color: var(--bg-primary);
+}
+h1 {
+  /* Box model */
+  font-family: var(--font-assistant-h1);
+  font-weight: bold;
+  font-size: var(--size-h1);
+}
+h2 {
+  /* Box model */
+  color: #666;
+  font-family: var(--font-fira-h2);
+  font-weight: 500;
+  font-size: var(--size-h2);
+}
+p {
+  /* Box model */
+  font-family: var(--font-assistant-h1);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+/* Positioning */
+/* Box model */
+/* Typographic */
+/* Visual */
+/* Misc */

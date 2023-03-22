@@ -1,0 +1,48 @@
+.container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+.grid-login {
+  /* Box model */
+  display: flex;
+}
+.grid-login [class^="grid-item"] {
+  /* Box model */
+  width: 100%;
+  border: 1px solid red;
+}
+.grid-login .grid-item-1 {
+}
+/* Positioning */
+/* Box model */
+/* Typographic */
+/* Visual */
+/* Misc */
