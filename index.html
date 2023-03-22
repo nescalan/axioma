@@ -20,18 +20,28 @@
   </head>
   <body>
     <section id="sec-login" class="grid-login container">
-      <div class="grid-item-1">
-        <div>
-          <span class="material-symbols-outlined"> local_police </span>
-          <h1>Axioma</h1>
-          <h2>Su Seguridad es Nuestra Prioridad</h2>
-        </div>
-        <p>
-          Un sistema de gestión de visitantes en la nube para registrar la
-          entrada, la salida y el seguimiento de visitantes y empleados.
-        </p>
-      </div>
-      <div class="grid-item-2"></div>
+      <form class="form">
+        <span class="title">Register</span>
+        <label for="username" class="label">Username</label>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          required=""
+          class="input"
+        />
+        <label for="email" class="label">Email</label>
+        <input type="email" id="email" name="email" required="" class="input" />
+        <label for="password" class="label">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          required=""
+          class="input"
+        />
+        <button type="submit" class="submit">Register</button>
+      </form>
     </section>
   </body>
 </html>
