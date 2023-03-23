@@ -16,42 +16,42 @@
     />
     <!-- CSS: Local Styles -->
     <link rel="stylesheet" href="./assets/css/import.css" />
+    <!-- CSS: Snackbar Styles -->
+    <link rel="stylesheet" href="./assets/css/login.css" />
     <title>Axioma</title>
   </head>
   <body>
-    <section id="sec-signup" class="container">
+    <section id="sec-login" class="container">
       <div class="form-box">
-        <form id="signup-form" class="form">
-          <span class="title">Sign up</span>
-          <h2 class="subtitle">Create a free account with your email.</h2>
+        <form id="login-form" class="form">
+          <span class="title">Iniciar Sesión </span>
+          <h2 class="subtitle">Su seguridad es nuestra prioridad.</h2>
           <div class="form-container">
+            <label for="full-name">Usuario:</label>
             <input
-              id="fullname-signup"
+              id="fullname-login"
               class="input"
               name="full-name"
               type="text"
               placeholder="Full Name"
             />
+
+            <label for="password">Contraseña: </label>
             <input
-              id="email-signup"
+              id="password-login"
               class="input"
-              type="email"
-              placeholder="Email"
-            />
-            <input
-              id="password-signup"
-              class="input"
+              name="password"
               type="password"
               placeholder="Password"
             />
           </div>
-          <button id="btn-signup" type="submit">Create Account</button>
+          <button id="btn-login" type="submit">Create Account</button>
         </form>
         <div class="form-section">
           <p>Have an account? <a href="./login.html">Log In</a></p>
         </div>
+        <div id="snackbar">Some text some message..</div>
       </div>
-      <p id="signup-error-message"></p>
     </section>
 
     <!-- SCRIPT: jQuery Google CDN -->
