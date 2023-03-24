@@ -93,7 +93,7 @@ $(document).ready(function () {
         // CONDITIONAL PASSWORD: Search for user password
         if (pwdResponse) {
           // REDIRECT: to a main page
-          // window.location.replace("./main.html");
+          window.location.replace("./main.html");
 
           console.log(idLogin);
         } else {
