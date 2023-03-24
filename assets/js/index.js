@@ -48,15 +48,15 @@ $(document).ready(function () {
     event.preventDefault();
 
     // Get the values entered in the form fields
-    let fullNameLogin = $("#fullname-login").val();
+    let idLogin = $("#id-login").val();
     let passwordInputLogin = $("#password-login").val();
 
     // Using trim()
-    fullNameLogin = $.trim(fullNameLogin);
+    idLogin = $.trim(idLogin);
     passwordInputLogin = $.trim(passwordInputLogin);
 
     // Submit the form if the sanitized data is valid
-    if (fullNameLogin.length > 0 && passwordInputLogin.length > 0) {
+    if (idLogin.length > 0 && passwordInputLogin.length > 0) {
       $("#login-error-message").html("Enviado Correctamente");
     } else {
       const loginErrorMessage = `
@@ -78,13 +78,30 @@ $(document).ready(function () {
 
   $("#btn-login").click(() => {
     // Get the values entered in the form fields
-    let fullNameLogin = $("#fullname-login").val();
+    var idLogin = $("#id-login").val();
     let passwordInputLogin = $("#password-login").val();
-    fullNameLogin = $.trim(fullNameLogin);
+    idLogin = $.trim(idLogin);
     passwordInputLogin.trim();
 
+    // SEARCH: For the user id
+    let usuariosActivos = [];
+    for (let i = 0; i < activeUsers.length; i++) {
+      usuariosActivos.push(activeUsers[i].id);
+      console.log(usuariosActivos);
+    }
+
+    console.log(`Este es idLogin: ${idLogin}`);
+    let idResponse = usuariosActivos.includes(idLogin);
+    console.log(idResponse);
+
+    if (idResponse) {
+      console.log("Usuario ya existe");
+    } else {
+      console.log("Podemos agregarlo a la BBDD");
+    }
+
     // DEBUG: console.log();
-    console.log(`Nombre: ${fullNameLogin} | Tamaño: ${fullNameLogin.length}`);
+    console.log(`Nombre: ${idLogin} | Tamaño: ${idLogin.length}`);
     console.log(
       `Password: ${passwordInputLogin} | Tamaño: ${passwordInputLogin.length}`
     );
