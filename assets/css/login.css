@@ -1,46 +1,118 @@
-.container {
-  width: 90%;
-  max-width: 1200px;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 60px 0;
-}
-
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-#signup-error-message {
+.form-box {
   /* Box model */
-  margin-top: 2rem;
-  padding: 1.6rem 0;
-  /* border: 1px solid #a94442; */
-  text-align: center;
+  margin: 0 auto;
+  max-width: 500px;
+  border-radius: 16px;
+
   /* Typographic */
-  color: #a94442;
+  color: #010101;
+
   /* Visual */
-  /* background-color: #f2dede; */
+  overflow: hidden;
+  background-color: #f1f7fe;
 }
+
+.form {
+  /* Positioning */
+  position: relative;
+
+  /* Box model */
+  padding: 32px 24px 24px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+
+  /* Typographic */
+  text-align: center;
+}
+
+/*Form text*/
+.title {
+  /* Typographic */
+  font-weight: bold;
+  font-size: var(--size-h1);
+}
+
+.form-container {
+  /* Box model */
+  width: 100%;
+  padding: 16px 0;
+  border-radius: 8px;
+
+  /* Typographic */
+  text-align: left;
+
+  /* Visual */
+  overflow: hidden;
+}
+
+/*Input boxes*/
+label {
+  text-align: left;
+}
+.input {
+  /* Box model */
+  width: 90%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  height: 30px;
+  padding: 8px 20px;
+  border: 0;
+  border-bottom: 1px solid #eee;
+
+  /* Visual */
+  outline: 0;
+  /* background-color: #fff; */
+}
+
+.form-section {
+  /* Box model */
+  padding: 16px;
+  /* font-size: 0.85rem; */
+
+  /* Visual */
+  background-color: #e0ecfb;
+  box-shadow: rgb(0 0 0 / 8%) 0 -1px;
+}
+
+.form-section a {
+  /* Typographic */
+  color: #0066ff;
+  font-weight: bold;
+
+  /* Visual */
+  transition: color 0.3s ease;
+}
+
+.form-section a:hover {
+  /* Typographic */
+  color: #005ce6;
+  text-decoration: underline;
+}
+
+/*Button*/
+.form button {
+  /* Box model */
+  padding: 1.6rem 16px;
+  border: 0;
+  border-radius: 8px;
+  /* Typographic */
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  /* Visual */
+  cursor: pointer;
+  background-color: #0066ff;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #005ce6;
+}
+.form button:active {
+  transform: translateY(0.2rem);
+}
+
 /* Positioning */
 /* Box model */
 /* Typographic */

@@ -16,7 +16,7 @@ h1 {
 }
 h2 {
   /* Box model */
-  color: #666;
+  /* color: #666; */
   font-family: var(--font-fira-h2);
   font-weight: 500;
   font-size: var(--size-h2);
@@ -26,6 +26,38 @@ p {
   font-family: var(--font-assistant-h1);
   font-weight: bold;
   font-size: 1.6rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 60px 0;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
 }
 
 /* Positioning */
