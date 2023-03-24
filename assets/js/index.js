@@ -4,7 +4,7 @@ $(document).ready(function () {
     {
       id: "109130576",
       usuario: "Nelson Gonzalez",
-      clave: "4u3p7px6",
+      clave: "nxbwcp7h",
       empresa: "Mobil Phone",
       tipoUsuario: "operario",
       activo: true,
@@ -20,7 +20,7 @@ $(document).ready(function () {
     {
       id: "401820626",
       usuario: "Nathalia Rojas",
-      clave: "Nvr63537",
+      clave: "nxbwcp7h",
       empresa: "Axioma Systems",
       tipoUsuario: "administrador",
       activo: true,
@@ -28,7 +28,7 @@ $(document).ready(function () {
     {
       id: "88285888",
       usuario: "Marco Gonzalez",
-      clave: "12345678",
+      clave: "nxbwcp7h",
       empresa: "Saint Gregori",
       tipoUsuario: "super usuario",
       activo: true,
@@ -36,7 +36,7 @@ $(document).ready(function () {
     {
       id: "103590581",
       usuario: "Don Nelson",
-      clave: "83102332",
+      clave: "nxbwcp7h",
       empresa: "Mototurbo Comunicaciones",
       tipoUsuario: "invitado",
       activo: true,
@@ -77,8 +77,9 @@ $(document).ready(function () {
 
       // INCLUDES(): Search for the id in the DDBB
       let idResponse = usuariosActivos.includes(idLogin);
+      console.log(idResponse);
 
-      // CONDITIONAL: Search for password
+      // CONDITIONAL ID: Search for user id
       if (idResponse) {
         // SEARCH: For the password in JSON file
         let passwordActivos = [];
@@ -89,8 +90,12 @@ $(document).ready(function () {
         // INCLUDES(): Search for the password
         let pwdResponse = passwordActivos.includes(passwordInputLogin);
 
+        // CONDITIONAL PASSWORD: Search for user password
         if (pwdResponse) {
-          alert("Ingreso al sistema correctamente");
+          // REDIRECT: to a main page
+          // window.location.replace("./main.html");
+
+          console.log(idLogin);
         } else {
           userErrorMessage();
         }
