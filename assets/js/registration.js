@@ -80,6 +80,8 @@ $(document).ready(function () {
     // Get the values entered in the form fields
     let fullNameLogin = $("#fullname-login").val();
     let passwordInputLogin = $("#password-login").val();
+    fullNameLogin = $.trim(fullNameLogin);
+    passwordInputLogin.trim();
 
     // DEBUG: console.log();
     console.log(`Nombre: ${fullNameLogin} | Tamaño: ${fullNameLogin.length}`);
