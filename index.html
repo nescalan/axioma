@@ -17,6 +17,9 @@
     <!-- CSS: Local Styles -->
     <link rel="stylesheet" href="./assets/css/import.css" />
     <link rel="stylesheet" href="./assets/css/login.css" />
+    <!-- SCRIPT: jQuery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <title>Axioma</title>
   </head>
   <body>
@@ -26,33 +29,31 @@
           <span class="title">Iniciar Sesión </span>
           <h2 class="subtitle">Su seguridad es nuestra prioridad.</h2>
           <div class="form-container">
-            <label for="full-name">Usuario:</label>
+            <label for="username">Usuario:</label>
             <input
-              id="id-login"
+              id="username"
               class="input"
-              name="full-name"
-              type="number"
+              name="username"
+              type="1091"
               placeholder="Ingrese el numero de cedula"
+              required
             />
-
+            <br />
             <label for="password">Contraseña: </label>
             <input
-              id="password-login"
+              id="password"
               class="input"
               name="password"
               type="password"
               placeholder="Contraseña"
+              required
             />
           </div>
           <button id="btn-login" type="button">Ingresar</button>
+          <div id="error-message">mensaje de Error</div>
         </form>
-
-        <div id="snackbar">Some text some message..</div>
       </div>
     </section>
-
-    <!-- SCRIPT: jQuery Google CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <!-- SCRIPT: Local JavaScript -->
     <script src="./assets/js/index.js"></script>
