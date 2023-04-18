@@ -21,12 +21,7 @@ $(document).ready(function () {
     const domUserName = $("#username").val();
     const domPassword = $("#password").val();
     const domErrorMessage = parent.find("#error-message");
-    let errorMessage, errorFlag;
-
-    console.log(domErrorMessage);
-
-    //Shows User Name and Error Message
-    console.log(`user: ${domUserName} | Pwd: ${domPassword} |`);
+    let errorMessage, flagError, flagUserName, flagPassword;
 
     if (domUserName.length != 0 && domPassword.length != 0) {
       // CONDITION: check user length
@@ -34,30 +29,38 @@ $(document).ready(function () {
         errorMessage =
           "No se pudo encontrar el usuario.<br> Revisa la ortografía e inténtalo de nuevo.";
         domErrorMessage.fadeIn();
-        errorFlag = true;
+        flagError = true;
       } else {
         domErrorMessage.fadeOut();
-        errorFlag = false;
+        flagUserName = true;
+        flagError = false;
       }
       // CONDITION: check user and password length
       if (domPassword.length < 8) {
         errorMessage = "La contraseña debe tener al menos 8 caracteres";
         domErrorMessage.fadeIn();
-        errorFlag = true;
+        flagError = true;
+      } else {
+        flagPassword = true;
       }
     } else {
-      console.log("Debe rellenar todos los campos");
       errorMessage = "Debe rellenar todos los campos";
       domErrorMessage.fadeIn();
-      errorFlag = true;
+      flagError = true;
     }
 
+    // VALIDATE: if user exist
+    if (flagUserName == true && flagPassword == true) {
+      console.log(`Felicidades: User ${domUserName} | Pwd: ${domPassword} `);
+      errorMessage =
+        "Felcidades, cumple con los requisitos. <br> Estamos validando sus credenciales ";
+      domErrorMessage.fadeIn();
+      flagError = true;
+    }
     // CONDITION: Displays errror Message on Login Form
-    if (errorFlag) {
+    if (flagError) {
       //CSS: Styles for errorMessage
       printLoginErrorMeggage(domErrorMessage, errorMessage);
     }
-
-    // Validate the password length
   });
 });
