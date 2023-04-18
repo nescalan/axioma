@@ -1,123 +1,66 @@
 $(document).ready(function () {
-  // DATA BASE: Active users
-  const activeUsers = [
-    {
-      id: "109130576",
-      usuario: "Nelson Gonzalez",
-      clave: "nxbwcp7h",
-      empresa: "Mobil Phone",
-      tipoUsuario: "operario",
-      activo: true,
-    },
-    {
-      id: "304130541",
-      usuario: "Jorge Basilio",
-      clave: "nxbwcp7h",
-      empresa: "Mobilnet Solutions",
-      tipoUsuario: "supervisor",
-      activo: true,
-    },
-    {
-      id: "401820626",
-      usuario: "Nathalia Rojas",
-      clave: "nxbwcp7h",
-      empresa: "Axioma Systems",
-      tipoUsuario: "administrador",
-      activo: true,
-    },
-    {
-      id: "88285888",
-      usuario: "Marco Gonzalez",
-      clave: "nxbwcp7h",
-      empresa: "Saint Gregori",
-      tipoUsuario: "super usuario",
-      activo: true,
-    },
-    {
-      id: "103590581",
-      usuario: "Don Nelson",
-      clave: "nxbwcp7h",
-      empresa: "Mototurbo Comunicaciones",
-      tipoUsuario: "invitado",
-      activo: true,
-    },
-  ];
+  $("#login-form").on("change", "#username", function () {
+    const parent = $(this).parent();
+    const domUserName = $(this).val();
+    console.log(domUserName);
+    const domErrorMessage = parent.find("#error-message");
+    let errorMessage;
 
-  function userErrorMessage() {
-    const userErrorMessage = `
-    <div class="error-message">
-      <p>"Está intentando ingresar con un usuario incorrecto o contraseña inválida."</p>
-    </div>
-    `;
-    $("#login-error-message").html(userErrorMessage);
-    $("#snackbar").html(userErrorMessage).addClass("show");
-
-    setTimeout(function () {
-      $("#snackbar").html(userErrorMessage).removeClass("show");
-    }, 3000);
-  }
-
-  $("#btn-login").click(() => {
-    // Get the values entered in the form fields
-    let idLogin = $("#id-login").val();
-    idLogin = parseInt(idLogin);
-    let passwordInputLogin = $("#password-login").val();
-
-    // TRIM(): trim function
-    idLogin = $.trim(idLogin);
-    passwordInputLogin = $.trim(passwordInputLogin);
-
-    // SUBMIT: the form if the sanitized data is valid
-    if (idLogin.length > 0 && passwordInputLogin.length > 0) {
-      // SEARCH: For the id in JSON file
-      let usuariosActivos = [];
-      for (let i = 0; i < activeUsers.length; i++) {
-        usuariosActivos.push(activeUsers[i].id);
-      }
-
-      // INCLUDES(): Search for the id in the DDBB
-      let idResponse = usuariosActivos.includes(idLogin);
-      console.log(idResponse);
-
-      // CONDITIONAL ID: Search for user id
-      if (idResponse) {
-        // SEARCH: For the password in JSON file
-        let passwordActivos = [];
-        for (let i = 0; i < activeUsers.length; i++) {
-          passwordActivos.push(activeUsers[i].clave);
-        }
-
-        // INCLUDES(): Search for the password
-        let pwdResponse = passwordActivos.includes(passwordInputLogin);
-
-        // CONDITIONAL PASSWORD: Search for user password
-        if (pwdResponse) {
-          // REDIRECT: to a main page
-          window.location.replace("./main.html");
-
-          console.log(idLogin);
-        } else {
-          userErrorMessage();
-        }
-      } else {
-        // ERROR MESSAGE: Tried to sign in with an incorrect account or password.
-        userErrorMessage();
-      }
+    // Validate the username using regular expressions
+    if (!/^\d+$/.test(domUserName)) {
+      errorMessage =
+        "Por favor, ingrese un número de identificación válido sin guiones";
+      console.log(errorMessage);
+      domErrorMessage.fadeIn();
+      errorFlag = true;
     } else {
-      // ERROR MESSAGE: Blank Form.
-      const loginErrorMessage = `
-      <div class="error-message">
-        <p>"Por favor, complete todos los campos."</p>
-      </div>
-      `;
-      const loginSnackbar = `
-        <p>"Complete all the requested fields."</p>
-      `;
-      $("#login-error-message").html(loginErrorMessage);
-      $("#snackbar").html(loginErrorMessage).addClass("show");
-      setTimeout(function () {
-        $("#snackbar").html(loginErrorMessage).removeClass("show");
-      }, 3000);
+      // Validate the username length
+      if (domUserName.length < 9) {
+        console.log(domUserName.length);
+        errorMessage = "Revise la cantidad de digitos ingresada";
+        console.log(errorMessage);
+        domErrorMessage.fadeIn();
+        errorFlag = true;
+      } else {
+        domErrorMessage.fadeOut();
+        console.log(domUserName.length);
+      }
+
+      if (errorFlag) {
+        //CSS: Styles for errorMessage
+        domErrorMessage.html(errorMessage).css({
+          margin: "20px 0",
+          padding: "15px 35px 15px 15px",
+          color: "#b94a48",
+          "font-size": "14px",
+          "line-height": "20px",
+          "border-color": "#eed3d7",
+          "border-radius": "4px",
+          "border-style": "solid",
+          "border-width": "1px",
+          backgroundColor: "#f2dede",
+        });
+      }
     }
   });
+
+  // $("#login-form").on("click", "#btn-login", function (event) {
+  //   event.preventDefault();
+  //   const parent = $(this).parent();
+  //   const domUserName = $("#username").val();
+  //   const domPassword = $("#password").val();
+
+  //   //Shows User Name and Error Message
+  //   console.log(`user: ${domUserName} | Pwd: ${domPassword} |`);
+
+  //   if (domUserName.length == 0 || domPassword.length == 0) {
+  //     errorMessage = "Debe rellenar todos los campos";
+  //   }
+
+  //   // Validate the password length
+  //   if (domPassword.length < 8) {
+  //     errorMessage = "La contraseña debe tener al menos 8 caracteres";
+  //     return false;
+  //   }
+  // });
 });

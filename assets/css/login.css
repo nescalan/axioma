@@ -12,7 +12,7 @@
   background-color: #f1f7fe;
 }
 
-.form {
+.form-box .form {
   /* Positioning */
   position: relative;
 
@@ -27,16 +27,15 @@
 }
 
 /*Form text*/
-.title {
+.form-box .title {
   /* Typographic */
   font-weight: bold;
   font-size: var(--size-h1);
 }
 
-.form-container {
+.form-box .form-container {
   /* Box model */
   width: 100%;
-  padding: 16px 0;
   border-radius: 8px;
 
   /* Typographic */
@@ -47,14 +46,15 @@
 }
 
 /*Input boxes*/
-label {
+.form-box label {
+  display: inline-flex;
+  margin-top: 16px;
   text-align: left;
 }
-.input {
+.form-box .input {
   /* Box model */
   width: 90%;
   margin-top: 10px;
-  margin-bottom: 20px;
   height: 30px;
   padding: 8px 20px;
   border: 0;
@@ -62,9 +62,7 @@ label {
 
   /* Visual */
   outline: 0;
-  /* background-color: #fff; */
 }
-
 .form-section {
   /* Box model */
   padding: 16px;
