@@ -35,6 +35,9 @@ $(document).ready(function () {
           "No se pudo encontrar el usuario.<br> Revisa la ortografía e inténtalo de nuevo.";
         domErrorMessage.fadeIn();
         errorFlag = true;
+      } else {
+        domErrorMessage.fadeOut();
+        errorFlag = false;
       }
       // CONDITION: check user and password length
       if (domPassword.length < 8) {
