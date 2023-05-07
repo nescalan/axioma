@@ -1,4 +1,48 @@
 $(document).ready(function () {
+  // DATA BASE: Active users
+  const activeUsers = [
+    {
+      id: "109130576",
+      usuario: "Nelson Gonzalez",
+      clave: "nxbwcp7h",
+      empresa: "Mobil Phone",
+      tipoUsuario: "operario",
+      activo: true,
+    },
+    {
+      id: "304130541",
+      usuario: "Jorge Basilio",
+      clave: "nxbwcp7h",
+      empresa: "Mobilnet Solutions",
+      tipoUsuario: "supervisor",
+      activo: true,
+    },
+    {
+      id: "401820626",
+      usuario: "Nathalia Rojas",
+      clave: "nxbwcp7h",
+      empresa: "Axioma Systems",
+      tipoUsuario: "administrador",
+      activo: true,
+    },
+    {
+      id: "88285888",
+      usuario: "Marco Gonzalez",
+      clave: "nxbwcp7h",
+      empresa: "Saint Gregori",
+      tipoUsuario: "super usuario",
+      activo: true,
+    },
+    {
+      id: "103590581",
+      usuario: "Don Nelson",
+      clave: "nxbwcp7h",
+      empresa: "Mototurbo Comunicaciones",
+      tipoUsuario: "invitado",
+      activo: true,
+    },
+  ];
+
   function printLoginErrorMeggage(domErrorMessage, errorMessage) {
     //CSS: Styles for errorMessage
     domErrorMessage.html(errorMessage).css({
@@ -35,7 +79,7 @@ $(document).ready(function () {
         flagUserName = true;
         flagError = false;
       }
-      // CONDITION: check user and password length
+      // CONDITION: password length
       if (domPassword.length < 8) {
         errorMessage = "La contraseña debe tener al menos 8 caracteres";
         domErrorMessage.fadeIn();
@@ -51,6 +95,25 @@ $(document).ready(function () {
 
     // VALIDATE: if user exist
     if (flagUserName == true && flagPassword == true) {
+      let foundUser = activeUsers.find((user) => {
+        return user.id === domUserName;
+      });
+      let foundPassword = activeUsers.find((password) => {
+        return password.clave === domPassword;
+      });
+
+      // CONDITIONAL: If the user and password is found go to menu
+      if (foundUser) {
+        console.log(foundUser.usuario);
+        if (foundPassword) {
+          console.log(foundPassword.clave);
+        } else {
+          console.log("Password not found");
+        }
+      } else {
+        console.log("User not found");
+      }
+
       console.log(`Felicidades: User ${domUserName} | Pwd: ${domPassword} `);
       errorMessage =
         "Felcidades, cumple con los requisitos. <br> Estamos validando sus credenciales ";

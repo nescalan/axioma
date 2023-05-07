@@ -120,4 +120,5 @@ $(document).ready(function () {
       }, 3000);
     }
   });
+  alert("Conectado");
 });

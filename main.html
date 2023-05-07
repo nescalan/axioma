@@ -5,43 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- CSS: jQuery CDN -->
+    <!-- SCRIPT: jQuery Google CDN -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <!-- CSS: Local Styles -->
     <link rel="stylesheet" href="./assets/css/import.css" />
     <title>Axioma | "Your safety is our priority"</title>
   </head>
 
   <body>
-    <div id="router">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </div>
+    <form class="login-form" autocomplete="off">
+      <h1>Login</h1>
+      <br />
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <input type="submit" value="Login" />
+      <p id="error"></p>
+    </form>
 
-    <section>
-      <div>
-        <br />
-        <p>Bienvenido: <span id="idConectado"></span></p>
-      </div>
-      <div id="home" class="page">
-        <h1>Welcome to the Home Page</h1>
-        <p>This is the home page of the website.</p>
-      </div>
-
-      <div id="about" class="page">
-        <h1>About Us</h1>
-        <p>We are a team of developers dedicated to creating great websites.</p>
-      </div>
-
-      <div id="contact" class="page">
-        <h1>Contact Us</h1>
-        <p>You can contact us via email, phone, or social media.</p>
-      </div>
-    </section>
-    <!-- SCRIPT: jQuery Google CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
-    <!-- SCRIPT: Local JavaScript -->
-    <script src="./assets/js/router.js"></script>
-    <script src="./assets/js/index.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
