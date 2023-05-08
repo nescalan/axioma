@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 html {
   /* Box model */
   font-size: 62.5%;
@@ -16,7 +21,6 @@ h1 {
 }
 h2 {
   /* Box model */
-  /* color: #666; */
   font-family: var(--font-fira-h2);
   font-weight: 500;
   font-size: var(--size-h2);
@@ -24,7 +28,7 @@ h2 {
 p {
   /* Box model */
   font-family: var(--font-assistant-h1);
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.6rem;
 }
 
