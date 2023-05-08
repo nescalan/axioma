@@ -104,9 +104,11 @@ $(document).ready(function () {
 
       // CONDITIONAL: If the user and password is found go to menu
       if (foundUser) {
-        console.log(foundUser.usuario);
+        // console.log(foundUser.usuario);
         if (foundPassword) {
-          console.log(foundPassword.clave);
+          // console.log(foundPassword.clave);
+          // window.location.href = "./pages/main-menu.html";
+          document.location.href = "./pages/main-menu.html";
         } else {
           console.log("Password not found");
         }
