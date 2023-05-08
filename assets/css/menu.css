@@ -1,0 +1,37 @@
+#main-menu {
+  display: flex;
+}
+#sec-left-col {
+  /* Box model */
+  width: 250px;
+  height: 100vh;
+
+  /* Visual */
+  box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+  background-image: linear-gradient(191deg, #0d345a, #090227);
+  transition: width 0.2s ease;
+}
+#sec-left-col .column {
+  /* Box model */
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  /* Typographic */
+  color: var(--bg-primary);
+}
+#sec-left-col .column:active {
+  background-color: #14375afe;
+}
+#sec-left-col .column img {
+  margin-right: 10px;
+}
+#sec-left-col .column p {
+  /* Box model */
+  margin-top: 5px;
+  line-height: 1.2;
+}
+/* Positioning */
+/* Box model */
+/* Typographic */
+/* Visual */
+/* Misc */
