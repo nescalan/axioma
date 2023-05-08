@@ -30,6 +30,60 @@
   margin-top: 5px;
   line-height: 1.2;
 }
+#sec-right-col {
+  /* Box model */
+  width: 100%;
+  border: 1px solid red;
+}
+#sec-right-col #condominos {
+  /* Box model */
+  padding: 80px 0;
+}
+#sec-right-col #condominos form {
+  /* Box model */
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid green;
+}
+
+#sec-right-col #condominos label,
+#sec-right-col #condominos input,
+#sec-right-col #condominos select {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+#sec-right-col #condominos .form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec-right-col #condominos button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#sec-right-col #condominos .btn-register {
+  background-color: #008000;
+}
+
+#sec-right-col #condominos .btn-new {
+  background-color: #ffa500;
+}
+
+#sec-right-col #condominos .btn-exit {
+  background-color: #ff0000;
+}
+
 /* Positioning */
 /* Box model */
 /* Typographic */

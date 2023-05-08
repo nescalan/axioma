@@ -105,9 +105,38 @@
           </div>
         </div>
       </section>
-      <section id="sec--col">
-        <h1>Work area</h1>
+      <section id="sec-right-col">
+        <section id="condominos">
+          <form>
+            <label for="cedula">Cédula:</label>
+            <input type="text" id="cedula" name="cedula" required />
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required />
+
+            <label for="numero-casa">Número de Casa:</label>
+            <input type="text" id="numero-casa" name="numero-casa" required />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required />
+
+            <label for="estado">Estado:</label>
+            <select id="estado" name="estado" required>
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+            </select>
+
+            <div class="form-buttons">
+              <button type="submit" class="btn-register">Registrar</button>
+              <button type="reset" class="btn-new">Nuevo</button>
+              <button type="button" class="btn-exit">Salir</button>
+            </div>
+          </form>
+        </section>
       </section>
     </main>
+
+    <!-- SCRIPT: Local JavaScript -->
+    <script src="../assets/js/condominos.js"></script>
   </body>
 </html>
