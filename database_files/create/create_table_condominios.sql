@@ -6,4 +6,3 @@ CREATE TABLE condominios(
     estado ENUM('activo', 'inactivo'),
     PRIMARY KEY (id)
 )ENGINE = InnoDB;
-
