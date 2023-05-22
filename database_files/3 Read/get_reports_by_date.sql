@@ -8,5 +8,5 @@ FROM reportes
 INNER JOIN visitas ON reportes.visita_id = visitas.id
 INNER JOIN condominos ON reportes.visita_id = condominos.id
 INNER JOIN viviendas ON reportes.vivienda_id = viviendas.id
-WHERE visitas.fecha_ingreso = '2024-03-10';
+WHERE visitas.fecha_ingreso = '2023-05-01';
 
