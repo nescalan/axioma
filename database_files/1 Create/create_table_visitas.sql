@@ -3,7 +3,7 @@ CREATE TABLE IF NOT EXISTS visitas(
     fecha_ingreso DATE NOT NULL,
     hora_ingreso TIME,
     fecha_salida DATE NOT NULL,
-    fecha_salida TIME,
+    hora_salida TIME,
     tipo_visita VARCHAR(60) NOT NULL,
     placa_vehiculo VARCHAR(7) NOT NULL,
     numero_acompanantes INT UNSIGNED NOT NULL,
