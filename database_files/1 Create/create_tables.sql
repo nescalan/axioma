@@ -11,7 +11,7 @@ CREATE TABLE IF NOT EXISTS condominos(
 #TABLE "VIVIENDAS"
 CREATE TABLE IF NOT EXISTS viviendas(
 	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-    numero_casa VARCHAR(4) NOT NULL,
+    numero_casa VARCHAR(120) NOT NULL,
     direccion VARCHAR(100) NOT NULL,
     telefono  VARCHAR(10) NOT NULL,
     estado ENUM('activo', 'inactivo'),
