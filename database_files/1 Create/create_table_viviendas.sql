@@ -3,5 +3,6 @@ CREATE TABLE viviendas(
     numero_casa VARCHAR(4) NOT NULL,
     direccion VARCHAR(4) NOT NULL,
     telefono  VARCHAR(10) NOT NULL,
-    estado ENUM('activo', 'inactivo') 
+    estado ENUM('activo', 'inactivo'),
+    PRIMARY KEY(id)
 ) ENGINE = InnoDB;

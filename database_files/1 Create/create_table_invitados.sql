@@ -3,5 +3,6 @@ CREATE TABLE invitados(
     cedula VARCHAR(10) NOT NULL,
     nombre VARCHAR(100) NOT NULL,
     telefono VARCHAR(10) NOT NULL,
-    acceso ENUM('conceder', 'denegar')
+    acceso ENUM('conceder', 'denegar'),
+    PRIMARY KEY(id)
 ) ENGINE = InnoDB;
