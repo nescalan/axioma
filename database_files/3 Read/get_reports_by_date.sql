@@ -9,4 +9,4 @@ FROM reportes rep
 INNER JOIN visitas vis ON rep.visita_id = vis.id
 INNER JOIN condominos con ON rep.visita_id = con.id
 INNER JOIN viviendas viv ON rep.vivienda_id = viv.id
-WHERE vis.fecha_ingreso = '2023-05-05';
+WHERE vis.fecha_ingreso = '2023-05-01';
