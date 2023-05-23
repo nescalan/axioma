@@ -1,12 +1,12 @@
 SELECT 
-	reportes.id AS Visita_No, 
-    visitas.fecha_ingreso AS Ingreso, 
-    condominos.nombre AS Residente,
-    viviendas.numero_casa AS Vivienda,
-    visitas.observaciones AS observaciones
-FROM reportes 
-INNER JOIN visitas ON reportes.visita_id = visitas.id
-INNER JOIN condominos ON reportes.visita_id = condominos.id
-INNER JOIN viviendas ON reportes.vivienda_id = viviendas.id
-WHERE visitas.fecha_ingreso = '2023-05-01';
-
+	rep.id AS Visita_No, 
+    vis.fecha_ingreso AS Ingreso, 
+    vis.hora_ingreso AS Hora_Ingreso,
+    con.nombre AS Residente,
+    viv.numero_casa AS Vivienda,
+    vis.observaciones AS observaciones
+FROM reportes rep
+INNER JOIN visitas vis ON rep.visita_id = vis.id
+INNER JOIN condominos con ON rep.visita_id = con.id
+INNER JOIN viviendas viv ON rep.vivienda_id = viv.id
+WHERE vis.fecha_ingreso = '2023-05-05';
