@@ -1,0 +1,120 @@
+/* ***** CONDOMINOS LEER ***** */
+
+#sec-condominos-leer {
+  /* Box model */
+  width: 90%;
+  height: 80vh;
+  margin: 0 auto;
+  padding: 16px 16px 24px;
+
+  /* Visual */
+  border: 1px solid var(--border);
+  border-radius: 2px;
+  background-color: #fff;
+}
+#sec-condominos-leer .search {
+  /* Box model */
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+#sec-condominos-leer .search-bar {
+  /* Box model */
+  width: 256px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+
+  /* Visual */
+  border: 1px solid #ceced0;
+}
+#sec-condominos-leer .search-bar span {
+  /* Box model */
+  padding: 0 10px;
+}
+#sec-condominos-leer .search-bar input {
+  /* Visual */
+  border: none;
+  outline: none;
+}
+#sec-condominos-leer table {
+  /* Box Model */
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+#sec-condominos-leer thead {
+  /* Box Model */
+  height: 46px;
+}
+#sec-condominos-leer th,
+#sec-condominos-leer td {
+  border: 1px solid var(--border);
+  padding: 8px;
+}
+
+#sec-condominos-leer th {
+  background-color: lightgray;
+}
+
+#sec-condominos-leer tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+/* ***** CONDOMINOS ***** */
+#sec-right-col #condominos {
+  /* Box model */
+  display: none;
+}
+#sec-right-col #condominos form {
+  /* Box model */
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  background-color: #fff;
+}
+
+#sec-right-col #condominos label,
+#sec-right-col #condominos input,
+#sec-right-col #condominos select {
+  margin: 10px 0;
+  width: 100%;
+  max-width: 300px;
+}
+
+#sec-right-col #condominos .form-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#sec-right-col #condominos button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#sec-right-col #condominos .btn-register {
+  background-color: #008000;
+}
+
+#sec-right-col #condominos .btn-new {
+  background-color: #ffa500;
+}
+
+#sec-right-col #condominos .btn-exit {
+  background-color: #ff0000;
+}
+
+/* Positioning */
+/* Box model */
+/* Typographic */
+/* Visual */
+/* Misc */

@@ -1,5 +1,8 @@
 <?php #index.php
 
-require_once "./actividad.php";
+
+require "./src/views/home.php";
+// require "./src/views/forms/condomino.php";
+
 
 ?>
