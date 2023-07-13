@@ -1,4 +1,4 @@
-INSERT INTO reportes (fecha_reporte, invitado_id, vivienda_id, visita_id, condomino_id)
+INSERT INTO reportes (fecha_reporte, invitado_id, vivienda_id, visita_id, inquilino_id)
 VALUES
     ('2023-05-01', 1, 1, 1, 1),
     ('2023-05-02', 2, 1, 2, 2),

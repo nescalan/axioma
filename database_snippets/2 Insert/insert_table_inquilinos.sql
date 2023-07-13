@@ -1,4 +1,4 @@
-INSERT INTO condominos (cedula, nombre, telefono, estado) VALUES
+INSERT INTO inquilinos (cedula, nombre, telefono, estado) VALUES
 (1000000001, 'Juan Pérez', '1234567890', 'activo'),
 (1000000002, 'María López', '9876543210', 'activo'),
 (1000000003, 'Pedro González', '0987654321', 'activo'),
